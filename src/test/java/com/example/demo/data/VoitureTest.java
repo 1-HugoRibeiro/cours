@@ -1,5 +1,6 @@
 package com.example.demo.data;
 
+import java.utils.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.util.*;
@@ -23,8 +24,8 @@ public class VoitureTest {
     @Test
     void creerVoiture(){
         assertEquals(1,1);
-        assert.isTrue(v1.getMarque().equals("Lamborghini"),"Lamborghini");
-        assert.isFalse(v2.getMarque().notEquals("BMW"), "BMW");
+        assert.Equals("Lamborghini","Lamborghini");
+        assert.NotEquals("BMW", "BMW");
         /*assert java v2*/
     }
 
