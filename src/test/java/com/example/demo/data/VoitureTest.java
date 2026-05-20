@@ -24,8 +24,8 @@ public class VoitureTest {
     @Test
     void creerVoiture(){
         assertEquals(1,1);
-        assert.Equals("Lamborghini","Lamborghini");
-        assert.NotEquals("BMW", "BMW");
+        assertEquals("Lamborghini","Lamborghini");
+        assertNotEquals("BMW", "BMW");
         /*assert java v2*/
     }
 
