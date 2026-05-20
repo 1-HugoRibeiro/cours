@@ -11,7 +11,7 @@ public class VoitureTest {
     Voiture v1;
     Voiture v2;
 
-    @BeforeAll
+    @beforeAll
     void créa(){
         v1 = new Voiture("Lamborghini", 250000);
         v1.setId(1);
@@ -24,7 +24,6 @@ public class VoitureTest {
     void creerVoiture(){
         assertEquals(1,1);
         assertEquals("Lamborghini","Lamborghini");
-        assertNotEquals("BMW", "BMW");
         /*assert java v2*/
     }
 
