@@ -9,14 +9,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @SpringBootTest
 public class VoitureTest {
     Voiture v1;
-    Voiture v2
+    Voiture v2;
 
-    @BeforeAll{
+    @BeforeAll
+    void créa(){
         v1 = new Voiture("Lamborghini", 250000);
         v1.setId(1);
         v2 = new Voiture("Renault",25000);
         v2.setId(2);
     }
+    
 
     @Test
     void creerVoiture(){
