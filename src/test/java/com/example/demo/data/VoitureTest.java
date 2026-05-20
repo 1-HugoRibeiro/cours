@@ -21,8 +21,8 @@ public class VoitureTest {
     @Test
     void creerVoiture(){
         assertEquals(1,1);
-        assert.isTrue(v1.getMarque().equals("Lamborghini"), v1.getPrix() == 250000);
-        assert.isFalse(v2.getMarque().notEquals("BMW"), v2.getPrix() == 110);
+        assert.isTrue(v1.getMarque().equals("Lamborghini"),"Lamborghini");
+        assert.isFalse(v2.getMarque().notEquals("BMW"), "BMW");
         /*assert java v2*/
     }
 
