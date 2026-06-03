@@ -27,4 +27,15 @@ class WebTests {
     @Autowired
     MockMvc mockMvc;
 
+    @BeforeAll
+    mockMvc.perform(post("/voiture").accept(MediaType.APPLICATION_JSON));
+
+    @Test
+    public static void main(Strings[] args){
+        Voiture v1 = new Voiture("Renaut", 15000);
+        statique.ajouter(v1);
+
+        assertTrue(v1.getStatistique()=15000);
+    }
+
 }
