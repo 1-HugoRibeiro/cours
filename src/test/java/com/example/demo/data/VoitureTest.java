@@ -11,8 +11,16 @@ public class VoitureTest {
 
     @Test
     void creerVoiture(){
-        assertEquals(1,1);
-        /*assert java*/
+        Voiture v1 = new Voiture("Lamborghini", 250000);
+        v1.setPrix(300000);
+        assertEquals(300000,v1.getPrix());
+
+        Voiture v2 = new Voiture("Renault",25000);
+        v2.setPrix(22500);
+        assertEquals(22500,v2.getPrix());
+
+        System.out.println(v1);
+        System.out.println(v2);
     }
 
 }
