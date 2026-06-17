@@ -28,7 +28,7 @@ class WebTests {
     MockMvc mockMvc;
 
     @Test
-    void testWeb() throws exception {
+    void testWeb() throws Exception {
 
         /* 
         StatistiqueImpl statistiqueImpl = new StatistiqueImpl();
