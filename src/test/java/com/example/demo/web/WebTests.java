@@ -40,6 +40,8 @@ class WebTests {
             .accept(MediaType.APPLICATION_JSON))
             .andDo(print())
             .andExcept(status().isOk());
+            .andExcept(jsonPath("$.nombreDeVoitures").value(2));
+            .andExcept(jsonPath("$.prixMoyen").value(14500));
     }
 
 }
