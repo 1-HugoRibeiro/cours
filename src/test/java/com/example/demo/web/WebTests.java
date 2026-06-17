@@ -27,4 +27,19 @@ class WebTests {
     @Autowired
     MockMvc mockMvc;
 
+    @Test
+    void testWeb() throws exception {
+
+        Echantillon E = new Echantillon();
+        E.setNombreDeVoitures(2);
+        E.setPrixMoyen(14500);
+
+        when(stats.prixMoyen()).thenReturn(E);
+
+        mockMvc.perform(get("/statistique")
+            .accept(MediaType.APPLICATION_JSON))
+            .andDo(print())
+            .andExcept(status().isOk());
+    }
+
 }
