@@ -30,18 +30,27 @@ class WebTests {
     @Test
     void testWeb() throws exception {
 
-        Echantillon E = new Echantillon();
-        E.setNombreDeVoitures(2);
-        E.setPrixMoyen(14500);
+        /* 
+        StatistiqueImpl statistiqueImpl = new StatistiqueImpl();
+        statistiqueImpl.ajouter(new Voiture("Ford", 20200));
+        Echantillon e =   statistiqueImpl.prixMoyen();
+        */
+        
+        
+        Echantillon echantillon = new Echantillon();
+        echantillon.setNombreDeVoitures(2);
+        echantillon.setPrixMoyen(20000);
 
-        when(stats.prixMoyen()).thenReturn(E);
+        when(statistiqueImpl.prixMoyen()).thenReturn(echantillon);
 
         mockMvc.perform(get("/statistique")
-            .accept(MediaType.APPLICATION_JSON))
-            .andDo(print())
-            .andExcept(status().isOk());
-            .andExcept(jsonPath("$.nombreDeVoitures").value(2));
-            .andExcept(jsonPath("$.prixMoyen").value(14500));
+                .accept(MediaType.APPLICATION_JSON))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.nombreDeVoitures").value(2))
+                .andExpect(jsonPath("$.prixMoyen").value(20000));
+
+    }
     }
 
 }
